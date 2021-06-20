@@ -149,150 +149,6 @@ h3{
     margin-left: 25px;
     margin-bottom: 25px;
 }
-.introduction{
-    display:inline-flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-self: baseline;
-    width:100%;
-    padding: 30px 0;
-}
-.introduction p{
-    font-family: var(--font-secondary);
-    font-size: var(--font-size-secondary);
-    text-align: center;
-    margin: 30px auto;
-    max-width: 350px;
-    position:relative;
-}
-.introduction img{
-    z-index: 1;
-    margin:auto;
-    border-radius: 70% 50%;
-    animation: photoAnimation 10s ease-in-out infinite;
-    box-shadow: 0 1px 20px 0 rgba(41, 41, 41, 0.405),
-                            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-@keyframes photoAnimation{
-    0%{
-        border-radius: 70% 50%;
-    }
-    25%{
-        border-radius: 60% 60%;
-    }
-    50%{
-        border-radius: 50% 70%;
-    }
-    75%{
-        border-radius: 60% 60%;
-    }
-    100%{
-        border-radius: 70% 50%;
-    }
-}
-.skills{
-    background-color: var(--primary-color);
-    color:var(--font-color-secondary);
-    padding:25px 0px;
-    width:100%;
-    background: var(--secondary-color);
-    background-size: 400% 400%;
-    overflow:hidden;
-    animation: change 10s ease-in-out infinite;
-    z-index: 2;
-}
-@keyframes change {
-    0%{
-        background-position: 0% 0%;
-    }
-    50%{
-        background-position: 100% 100%;
-    }
-    100%{
-        background-position: 0% 0%;
-    }
-}
-.skills div{
-    display:flex;
-    flex-wrap: wrap;
-}
-.skills div .skills-block{
-    display:flex;
-    flex-direction: column;
-    margin:0 auto;
-    align-self:stretch;
-}
-h4{
-    font-size: var(--font-size-terciary);
-    font-family: var(--font-size-primary);
-}
-.skills-block ul{
-    font-size: var(--font-size-fourth);
-    font-family: var(--font-size-secondary);
-    align-self:flex-start
-}
-.skills-block ul li{
-    margin:10px;
-}
-.interests{
-    font-family: var(--font-primary);
-    color:var(--font-color-primary);
-    padding:25px 15px;
-    z-index:1;
-    background-color: #ffffff;
-    overflow:hidden;
-}
-.interests p{
-    text-align: center;
-    font-size: var(--font-size-secondary);
-}
-.interests-list{
-    box-sizing: content-box;
-    height:70px;
-    overflow:hidden;
-    margin:25px 0;
-    border-radius: 15px;
-}
-span{
-    display:block;
-    height:100%;
-    margin:0;
-    animation: spin 15s ease-in-out infinite;
-}
-@keyframes spin{
-    10%{
-        transform:translateY(-0%)
-    }
-    25%{
-        transform:translateY(-122%)
-    }
-    40%{
-        transform:translateY(-244%)
-    }
-    55%{
-        transform:translateY(-380%)
-    }
-    75%{
-        transform:translateY(-520%)
-    }
-    100%{
-        transform:translateY(0%);
-    }
-
-}
-
-/*---------Media querys-----------*/
-@media (max-width:600px){
-    .skills {
-        text-align: left;
-    }
-    .skills div{
-        display:inline-block;
-        flex-direction:column;
-        margin-left:10%;
-    }
-}
 
 /*---------PROJECTS-----------------*/
 .projects-introduction{
@@ -330,7 +186,7 @@ span{
     margin: 25px auto;
     padding-bottom: 5%;
     border-radius: 1rem;
-    width: 300px;
+    width: 350px;
     min-height: 400px;
     box-shadow: 0 6px 50px 0 rgba(0, 0, 0, 0.9),
         0 6px 50px 0 rgba(0, 0, 0, 0.5);
@@ -349,10 +205,15 @@ span{
 .card-teck {
     margin-top: 25px;
     color: #000000;
-    margin: 8% 5%;
+    margin: 8% 0%;
     text-align: left;
     min-height: 150px;
-
+}
+.cardTech p{
+    margin: 25px 15px;
+    color: var(--font-color-primary);
+    font: var(--font-size-terciary) bold;
+    font-family: var(--font-primary);
 }
 .cardTech ul {
             display: flex;
@@ -360,11 +221,12 @@ span{
             justify-content: center;
             align-self: center;
             margin:15px  0px;
-            width: 90%;
+            width: 80%;
+            min-height: 80px;
         }
 
 .cardTech ul li {
-    color:black;
+    color: var(--font-color-primary);
     font-size: var(--font-size-fourth);
     font-family: Consolas;
     background-color: rgba(136, 136, 136, 0.535);
@@ -372,15 +234,49 @@ span{
     list-style-type: none;
     display:flex;
     flex-wrap: wrap;
+    height:fit-content;
     margin: 5px auto;
     padding:5px;
 }
 .card-description {
                 background-color: #ffffff;
-                color: #000000;
+                color: var(--font-color-primary);
                 text-align: center;
+                align-self: center;
                 font: var(--font-size-terciary) bold;
-                margin:0 15px;
+                margin:auto 15px;
                 font-family: var(--font-secondary);
-                height: fit-content;
+                min-height: 250px;
                 }
+.repo-link {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    margin: 25px auto;
+}
+.repo-link a{
+    margin: 25px auto;
+    justify-content: center;
+    align-self: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-family: var(--font-primary);
+    font-size: var(--font-size-terciary);
+    color: var(--font-color-primary);
+}
+.repo-link a:hover{
+    color:#4b4b4b;
+    text-decoration: underline;
+}
+.repo-link img{
+    width:50px;
+    display:flex;
+    justify-content: center;
+    align-self: center;
+}
+.repo-link img:hover{
+    width:40px;
+    border: 5px solid #000000;
+    border-radius:50%;
+}
