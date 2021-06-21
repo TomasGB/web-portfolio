@@ -160,6 +160,7 @@ h3{
 .introduction p{
     font-family: var(--font-secondary);
     font-size: var(--font-size-secondary);
+    font-weight: 600;
     text-align: center;
     margin: 30px auto;
     max-width: 350px;
@@ -258,7 +259,7 @@ span{
     display:block;
     height:100%;
     margin:0;
-    animation: spin 15s ease-in-out infinite;
+    animation: spin 15s ease-out infinite;
 }
 @keyframes spin{
     10%{

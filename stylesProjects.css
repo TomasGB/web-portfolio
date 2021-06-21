@@ -162,6 +162,7 @@ h3{
 .projects-introduction p{
     font-family: var(--font-secondary);
     font-size: var(--font-size-secondary);
+    font-weight: 600;
     text-align: center;
     margin: 25px auto;
     max-width: 450px;
@@ -229,7 +230,7 @@ h3{
     color: var(--font-color-primary);
     font-size: var(--font-size-fourth);
     font-family: Consolas;
-    background-color: rgba(136, 136, 136, 0.535);
+    background-color: rgba(136, 136, 136, 0.165);
     border-radius: 15px;
     list-style-type: none;
     display:flex;
