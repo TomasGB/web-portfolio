@@ -123,6 +123,7 @@ html {
 body {
     margin:0;
     padding:0;
+    overflow-x: hidden;
     display:block;
     font-family: var(--font-primary);
     transition-duration: 0.2s;
@@ -193,6 +194,28 @@ h3{
         border-radius: 70% 50%;
     }
 }
+
+.from-right {
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  transition: opacity 800ms ease-in, -webkit-transform 650ms ease-in;
+  opacity: 0;
+}
+
+.from-right.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+.fade-in{
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear{
+    opacity:1;
+}
+
 .skills{
     background-color: var(--primary-color);
     color:var(--font-color-secondary);
