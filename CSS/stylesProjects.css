@@ -102,6 +102,18 @@ body {
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 }
+body::-webkit-scrollbar{
+    width:12px;
+}
+body::-webkit-scrollbar-track{
+    background:var(--primary-color);
+    height:5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #000000;
+    border-radius: 15px;
+    border: 3px solid var(--primary-color);
+}
 header{
     overflow:hidden;
     width:100%;
@@ -186,7 +198,7 @@ h3{
     font-weight: 600;
     text-align: center;
     margin: 25px auto;
-    max-width: 450px;
+    width: 450px;
     position:relative;
 }
 .repos{
@@ -327,6 +339,73 @@ h3{
     border: 5px solid #000000;
     border-radius: 50%;
     transform:translateY(-15px);
+}
+
+/*=========== MEDIA QUERYS==========*/
+@media (min-width: 2000px){
+    .navbar ul li a{
+        font-size:2.7rem;
+    }
+    h1{
+        font-size: 5rem;
+        margin-top: 150px;
+    }
+    h2{
+        font-size:3.5rem;
+    }
+    .projects-introduction p{
+        font-size: 3rem;
+        width:800px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .card {
+        margin: 50px auto;
+        padding-bottom: 5%;
+        border-radius: 3rem;
+        width: 550px;
+        height: fit-content;
+        }
+    .card-title{
+        font-size: 2.7rem;
+        height: 100px;
+    }
+    .card-description {
+        font-size:2rem;
+        margin: 50px 5px;
+        min-height: 400px;
+    }
+    .cardTech{
+        min-height:200px;
+        margin: 25px;
+    }
+    .cardTech ul li {
+        font-size: 1.7rem;
+        margin: 5px;
+    }
+    .cardTech p{
+        font-size: 2.7rem;
+        margin:50px 15px;
+    }
+    .repo-link a{
+        font-size:2.7rem;
+
+    }
+    .repo-link img{
+        width:100px;
+    }
+    .repo-link img:hover{
+        width:90px;
+    }
+
+    .footer p{
+        font-size: 3rem;
+        margin: 100px 0 100px 0;
+    }
+    .socials-link img{
+        width:100px;
+    }
+
 }
 @media(max-width:600px){
     .navbar ul{

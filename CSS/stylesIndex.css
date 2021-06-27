@@ -25,6 +25,7 @@ html {
     margin:0;
     padding:0;
 }
+
 /* ===== STARS =====*/
     #stars {
       width: 1px;
@@ -128,6 +129,18 @@ body {
     transition-duration: 0.2s;
     transition-timing-function: ease-in-out;
 }
+body::-webkit-scrollbar{
+    width:12px;
+}
+body::-webkit-scrollbar-track{
+    background:var(--primary-color);
+    height:5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #000000;
+    border-radius: 15px;
+    border: 3px solid var(--primary-color);
+}
 header{
     overflow:hidden;
 }
@@ -164,7 +177,7 @@ h3{
     font-weight: 600;
     text-align: center;
     margin: 30px auto;
-    max-width: 350px;
+    width: 350px;
     position:relative;
 }
 .introduction img{
@@ -333,6 +346,52 @@ span{
     transform:translateY(-15px);
 }
 /*---------Media querys-----------*/
+@media (min-width: 2000px){
+    .navbar ul li a{
+        font-size:2.7rem;
+    }
+    h1{
+        font-size: 5rem;
+        margin-top: 150px;
+    }
+    h2{
+        font-size:3.5rem;
+    }
+    .introduction{
+        margin: 100px auto;
+    }
+    .introduction p{
+        font-size: 3rem;
+        width:700px;
+    }
+    .introduction img{
+        width:600px
+    }
+    .skills{
+        padding:100px 50px;
+    }
+    .skills h3{
+        font-size: 3.5rem;
+    }
+    .skills h4,li{
+        font-size: 2.3rem;
+    }
+    .interests{
+        padding: 200px 0px;
+    }
+    .interests p{
+        font-size: 3rem;
+        margin-bottom:100px;
+    }
+    .footer p{
+        font-size: 3rem;
+        margin: 100px 0 100px 0;
+    }
+    .socials-link img{
+        width:100px;
+    }
+
+}
 @media (max-width:600px){
     .navbar ul{
         justify-content: space-around;
